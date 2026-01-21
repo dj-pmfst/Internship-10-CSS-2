@@ -4,4 +4,86 @@ body{
     background-color: #0A181B;
     color: white;
     font-family: "FuseV.2Display-Regular"; 
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+a img {
+    display: block; 
+}
+
+a img::after {
+    display: none;  
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #30cec2;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.announcement{
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #162426;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section {
+    background-image: url('media/header.png');
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    min-height: 100vh; 
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    padding: 0;
+}
+
+.navbar {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    position: relative;
+}
+
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+    list-style: none;
 }
