@@ -1,11 +1,16 @@
 @import url(https://db.onlinewebfonts.com/c/452ec27decf4369db2b93619854b5638?family=FuseV.2Display-Regular); 
 
+html {
+    font-size: 10px; 
+  }
+
 body{
     background-color: #0A181B;
     color: white;
     font-family: "FuseV.2Display-Regular"; 
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 a{
@@ -19,8 +24,8 @@ a img {
     display: block; 
 }
 
-a img::after {
-    display: none;  
+a:has(img)::after{
+    display: none;
 }
 
 a::after {
@@ -38,12 +43,21 @@ a:hover::after {
     width: 100%;
 }
 
+.a img::after {
+    display: none;  
+}
+
 .announcement{
     font-size: 14px;
     line-height: 24px;
     background-color: #162426;
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .hero-section {
@@ -76,14 +90,106 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: auto;
+    width: 40rem;
     position: relative;
+    justify-content: space-between;
+    list-style: none;
 }
 
-ul {
+/* ul {
     margin-block-start: 1em;
     margin-block-end: 1em;
     padding-inline-start: 40px;
     unicode-bidi: isolate;
-    list-style: none;
+    
+} */
+
+.navbar img{
+    height: 4rem;
+}
+
+ul li{
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.hero-section{
+    padding-top: 1rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.title{
+    font-weight: 800;
+    align-self: center;
+    font-family: "Fuse V.2 Display", Arial, sans-serif;
+    font-size: 3.5rem;
+    padding-top: 10rem;
+    width: 100%;
+    top: 244px;
+    left: 100px;
+    font-weight: 0;
+    letter-spacing: 0px;
+}
+
+.title h1{
+    margin: 0;
+}
+
+.subtitle{
+    margin-top: 1.6rem;
+    color: hsla(0, 0%, 100%, .8);
+    font-family: "Fuse V.2 Display", Arial, sans-serif;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 1.7rem;
+}
+
+.header__buttons{
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__buttons button:first-child{
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 15px;
+    background-color: #30cec2;
+    color: #0a181b;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    outline: 0;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.header__buttons button:first-child:hover{
+    background-color: #4ee4d8;
+}
+
+.header__buttons button:last-child{
+    border: 1px solid hsla(0, 0%, 100%, .8);
+    background: transparent;
+    border-radius: 15px;
+    padding: 12px 32px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 8px;
+    text-decoration: none;
 }
