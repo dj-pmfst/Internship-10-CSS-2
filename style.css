@@ -125,16 +125,32 @@ ul li{
     align-self: center;
     font-family: "Fuse V.2 Display", Arial, sans-serif;
     font-size: 3.5rem;
-    padding-top: 10rem;
     width: 100%;
     top: 244px;
     left: 100px;
     font-weight: 0;
     letter-spacing: 0px;
+    padding-top: 10rem;
 }
 
 .title h1{
     margin: 0;
+    display: inline;
+}
+
+.typing {
+    color: #30cec2;
+    display: inline-block; 
+    font-size: 3.5rem;
+}
+
+.cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 .subtitle{
