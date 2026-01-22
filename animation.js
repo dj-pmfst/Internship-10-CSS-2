@@ -1,4 +1,4 @@
-const words = ['poduzetnika', 'developera', 'dizajnera'];
+const words = ['poduzetnika', 'developera', 'dizajnera', 'marketingaša'];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

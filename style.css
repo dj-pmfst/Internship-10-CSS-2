@@ -200,8 +200,6 @@ ul li{
     line-height: 24px;
     color: #fff;
     cursor: pointer;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -209,3 +207,82 @@ ul li{
     margin-left: 8px;
     text-decoration: none;
 }
+
+.conference{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 16rem;
+    margin-right: 0;
+    padding-left: 10rem;
+    padding-right: 2rem;
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+    display: block;
+    position: relative;
+}
+
+.conference img{
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.image-container {
+    position: relative;
+    width: 76rem;
+    height: 48rem;
+}
+
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img1 {
+    animation: fade1 20s infinite;
+}
+
+.img2 {
+    animation: fade2 20s infinite;
+}
+
+@keyframes fade1 {
+    0%, 45% { opacity: 1; }
+    55%, 100% { opacity: 0; }
+}
+
+@keyframes fade2 {
+    0%, 45% { opacity: 0; }
+    55%, 100% { opacity: 1; }
+}
+
+.conference__title {
+    font-family: "Fuse V.2 Display", Arial, sans-serif;
+    font-size: 2.5rem;
+    line-height: 5.5rem;
+    letter-spacing: 0px;
+    width: 55rem;
+    height: 116px;
+    font-weight: 800;
+    margin-left: 38rem;
+    margin-right: 0;
+}
+
+.conference p {
+    margin-left: 38rem;
+    margin-right: 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+    letter-spacing: 0px;
+    opacity: 80%;
+    width: 50rem;
+}
+/* .conference__title h1{
+    font-weight: bold;
+} */
