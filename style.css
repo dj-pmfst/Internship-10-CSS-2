@@ -347,7 +347,7 @@ ul li{
 }
 
 .lecture--workshop .lectures__title::before {
-    background-image: url('media/radionice\ \(1\).svg');
+    background-image: url('media/radionice.svg');
 }
 
 .lecture--talks .lectures__title::before{
@@ -366,7 +366,6 @@ ul li{
     opacity: 80%;
 }
 
-/* Animation keyframes */
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -389,12 +388,10 @@ ul li{
     }
 }
 
-/* Initial state - hidden */
 .lecture {
     opacity: 0;
 }
 
-/* Animated states */
 .lecture.animate-left {
     animation: fadeInLeft 0.8s ease-out forwards;
 }
@@ -403,7 +400,6 @@ ul li{
     animation: fadeInRight 0.8s ease-out forwards;
 }
 
-/* Stagger delays for multiple items */
 .lecture:nth-child(1) {
     animation-delay: 0s;
 }
@@ -416,6 +412,60 @@ ul li{
     animation-delay: 0.4s;
 }
 
+.lectures__description h2{
+    width: 568px;
+    height: 116px;
+    top: 3370px;
+    left: 205px;
+    opacity: 1;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0px;   
+    margin-bottom: 0; 
+}
+
+.lectures__description p{
+    width: 505px;
+    height: 72px;
+    top: 3502px;
+    left: 205px;
+    margin-bottom: 100px;
+}
+
+.lecture__type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.type{
+    width: 300px;
+    height: 200px;
+    top: 3654px;
+    left: 164px;
+    opacity: 1;
+}
+
+.type--live .lectures__title::before{
+    background-image: url('media/live.svg');
+}
+
+.type--online .lectures__title::before{
+    background-image: url('media/desktop-wifi.svg');
+}
+
+.type {
+    opacity: 0;
+}
+
+.type.animate-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.type.animate-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
 
 /* ul {
     margin-block-start: 1em;

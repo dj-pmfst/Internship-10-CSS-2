@@ -21,3 +21,15 @@ document.querySelectorAll('.lectures__block:nth-child(2) .lecture').forEach(lect
     lecture.dataset.animation = 'animate-right';
     observer.observe(lecture);
 });
+
+const typeLive = document.querySelector('.type--live');
+if (typeLive) {
+    typeLive.dataset.animation = 'animate-left';
+    observer.observe(typeLive);
+}
+
+const typeOnline = document.querySelector('.type--online');
+if (typeOnline) {
+    typeOnline.dataset.animation = 'animate-right';
+    observer.observe(typeOnline);
+}
