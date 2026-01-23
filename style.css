@@ -907,3 +907,205 @@ a.sponsor__logo::after {
         min-width: 280px;
     }
 }
+
+.signup-section {
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 80px 20px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    position: relative;
+}
+
+.signup-section__content {
+    flex: 1;
+    max-width: 600px;
+    padding-top: 80px;
+}
+
+.signup-section__title {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.signup-section__benefits {
+    margin-bottom: 40px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+.benefit-item[data-delay="0"] {
+    animation-delay: 0.2s;
+}
+
+.benefit-item[data-delay="1"] {
+    animation-delay: 0.4s;
+}
+
+.benefit-item[data-delay="2"] {
+    animation-delay: 0.6s;
+}
+
+.benefit-item[data-delay="3"] {
+    animation-delay: 0.8s;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.benefit-item__icon {
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(48, 206, 194, 0.1);
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.benefit-item__content {
+    flex: 1;
+}
+
+.benefit-item__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.benefit-item__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.signup-section__button {
+    padding: 14px 40px;
+    background-color: #30cec2;
+    color: #0a181b;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-section__button:hover {
+    background-color: #4ee4d8;
+}
+
+.signup-section__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.signup-section__phone {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .signup-section {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .signup-section__image {
+        position: relative;
+        top: 0;
+    }
+    
+    .signup-section__phone {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-section__title {
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+    
+    .benefit-item__title {
+        font-size: 20px;
+    }
+    
+    .benefit-item__text {
+        font-size: 14px;
+    }
+    
+    .signup-section__phone {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+    .signup-section {
+        padding: 60px 20px;
+    }
+    
+    .signup-section__title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .benefit-item {
+        margin-bottom: 30px;
+    }
+    
+    .benefit-item__icon {
+        min-width: 40px;
+        height: 40px;
+    }
+    
+    .benefit-item__icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}
