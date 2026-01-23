@@ -389,12 +389,10 @@ ul li{
     }
 }
 
-/* Initial state - hidden */
 .lecture {
     opacity: 0;
 }
 
-/* Animated states */
 .lecture.animate-left {
     animation: fadeInLeft 0.8s ease-out forwards;
 }
@@ -403,7 +401,6 @@ ul li{
     animation: fadeInRight 0.8s ease-out forwards;
 }
 
-/* Stagger delays for multiple items */
 .lecture:nth-child(1) {
     animation-delay: 0s;
 }
