@@ -792,7 +792,7 @@ ul li{
     letter-spacing: 0px;
 }
 
-.schedule__item {
+.schedule__item, .schedule__item--open {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     width: 1000px;
@@ -802,6 +802,10 @@ ul li{
 .schedule img{
     cursor: pointer;
     padding-left: 5px;
+}
+
+.schedule__item--open img {
+    cursor: default;
 }
 
 .type__btn{
@@ -852,6 +856,28 @@ ul li{
     opacity: 80%;
     padding-left: 146px;
     padding-bottom: 20px;
+    max-width: 808px;
+}
+
+.item__about--open {
+    display: flex;
+    flex-direction: row;
+    padding-left: 140px;
+    padding-bottom: 12px;
+    padding-top: 8px;
+}
+
+.item__about--open img:first-child{
+    width: 56px;
+    height: 56px;
+    opacity: 1;
+    border-radius: 100px;
+}
+
+.item__about--open .item__about {
+    padding-left: 16px;
+    opacity: 1;
+    padding-right: 196px;
 }
 
 
