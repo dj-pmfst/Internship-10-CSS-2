@@ -47,6 +47,15 @@ a:hover::after {
     display: none;  
 }
 
+
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+    list-style: none;
+}
+
 .announcement{
     font-size: 14px;
     line-height: 24px;
@@ -655,13 +664,76 @@ ul li{
     margin-left: 56px;
 }
 
- ul {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-    list-style: none;
+.schedule {
+    margin-left: 464px;
+    margin-right: 464px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.schedule__title {
+    opacity: 1;
+}
+
+.schedule__title h2 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 0; 
+}
+
+.schedule__menu {
+    margin-top: 40px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px; 
+}
+
+.schedule__day {
+    display: flex;
+    flex-direction: row;
+    gap: 16px; 
+}
+
+.schedule__menu--switcher {
+    width: 88px;
+    height: 112px;
+    opacity: 1;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.schedule__menu--switcher h3 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0; 
+}
+
+.schedule__type {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+
 
 
 .sponsors {
@@ -676,7 +748,6 @@ ul li{
     text-align: center;
     margin-bottom: 60px;
 }
-
 
 .sponsors__gold {
     margin-bottom: 80px;
