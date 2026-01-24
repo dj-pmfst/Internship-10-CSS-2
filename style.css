@@ -664,8 +664,6 @@ ul li{
 }
 
 .schedule {
-    /* margin-left: 464px;
-    margin-right: 464px; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -793,10 +791,38 @@ ul li{
 }
 
 .schedule__item, .schedule__item--open {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     width: 1000px;
     margin-bottom: 16px;
+}
+
+.schedule__item.animate, .schedule__item--open.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.schedule__item.animate, .schedule__item--open.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.schedule__item:nth-child(2).animate,
+.schedule__item--open:nth-child(2).animate {
+    transition-delay: 0.1s;
+}
+
+.schedule__item:nth-child(3).animate,
+.schedule__item--open:nth-child(3).animate {
+    transition-delay: 0.2s;
+}
+
+.schedule__item:nth-child(4).animate,
+.schedule__item--open:nth-child(4).animate {
+    transition-delay: 0.3s;
 }
 
 .schedule img{
@@ -857,6 +883,7 @@ ul li{
     padding-left: 146px;
     padding-bottom: 20px;
     max-width: 808px;
+    max-height: 120px;
 }
 
 .item__about--open {
