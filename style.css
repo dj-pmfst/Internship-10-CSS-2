@@ -67,6 +67,11 @@ ul {
     left: 0;
     right: 0;
     z-index: 1000;
+    padding: 10px 20px;
+}
+
+.announcement p {
+    margin: 0;
 }
 
 .hero-section {
@@ -169,6 +174,8 @@ ul li{
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .header__buttons button:first-child, .live__button--full{
@@ -730,6 +737,8 @@ ul li{
     display: flex;
     flex-direction: row;
     gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .schedule__type .schedule__menu--switcher {
@@ -907,6 +916,301 @@ ul li{
     padding-right: 196px;
 }
 
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+
+    .announcement {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 8px 15px;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        width: 100%;
+        padding-right: 0;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+        padding-top: 50px;
+    }
+
+    .typing {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .header__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header__buttons button:first-child{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    .header__buttons button:last-child {
+        display: none;
+    }
+
+    .live__container {
+        display: none;
+    }
+
+    .conference {
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .conference__title {
+        margin-left: 0;
+        width: 100%;
+        font-size: 22px;
+        line-height: 32px;
+        height: auto;
+    }
+
+    .conference__title h1{
+        line-height: 40px;
+    }
+
+    .conference p {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .lectures {
+        margin: 0;
+        padding: 60px 20px;
+    }
+
+    .lectures__block {
+        flex-direction: column;
+    }
+
+    .lectures__block:first-child {
+        flex-direction: column-reverse;
+    }
+
+    .lectures img {
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .lectures__content {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .lecture {
+        margin-bottom: 40px;
+        margin-left: 40px;
+        width: 300px;
+    }
+
+    .lectures__title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .lectures__description h2 {
+        width: 100%;
+        font-size: 36px;
+        line-height: 44px;
+        height: auto;
+    }
+
+    .lectures__description p {
+        width: 100%;
+        height: auto;
+    }
+
+    .lecture__type {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .lecture__type:last-child{
+        padding-left: 40px;
+    }
+
+    .type {
+        width: 100%;
+        height: auto;
+    }
+
+    .live__container--full {
+        display: none;
+    }
+
+    .schedule__title h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .schedule__list {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .schedule__item,
+    .schedule__item--open {
+        width: 360px;
+    }
+
+    .schedule__list--subtitle {
+        flex-wrap: wrap;
+        padding-left: 10px;
+    }
+
+    .schedule__time {
+        padding-left: 0;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .item__about {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100%;
+    }
+
+    .item__about--open {
+        padding-left: 10px;
+        flex-direction: column;
+    }
+
+    .item__about--open .item__about {
+        padding-left: 0;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 8px;
+    }
+
+    .announcement {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .navbar img {
+        height: 28px;
+    }
+
+    ul li {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 24px;
+        padding-top: 30px;
+    }
+
+    .typing {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .header__buttons button:first-child
+    .live__button--full {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+
+    .live__container,
+    .live__container--full {
+        display: none;
+    }
+
+    .feed__title,
+    .feed__title--full {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .feed__host,
+    .feed__about,
+    .feed__host--full {
+        font-size: 14px;
+    }
+
+    .conference__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .lectures__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .lectures__description h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .schedule__title h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .schedule__menu--switcher {
+        min-width: 70px;
+        height: 90px;
+        font-size: 14px;
+    }
+
+    .schedule__menu--switcher h3 {
+        font-size: 28px;
+    }
+
+    .schedule__type .schedule__menu--switcher {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
 
 
 .sponsors {
@@ -1538,4 +1842,4 @@ a.sponsor__logo::after {
         width: 24px;
         height: 24px;
     }
-}
+} 
