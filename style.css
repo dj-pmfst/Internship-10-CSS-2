@@ -1,8 +1,13 @@
 @import url(https://db.onlinewebfonts.com/c/452ec27decf4369db2b93619854b5638?family=FuseV.2Display-Regular); 
+  
+html, body {
+    width: 100%;
+    max-width: 100vw;
+}
 
 html {
     font-size: 10px; 
-  }
+}
 
 body{
     background-color: #0A181B;
@@ -47,7 +52,6 @@ a:hover::after {
     display: none;  
 }
 
-
 ul {
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -67,6 +71,16 @@ ul {
     left: 0;
     right: 0;
     z-index: 1000;
+    padding: 10px 20px;
+    max-width: 2400px;
+}
+
+.announcement p {
+    margin: 0;
+}
+
+.announcement p:last-child {
+    display: none;
 }
 
 .hero-section {
@@ -88,13 +102,16 @@ p {
 }
 
 .navbar {
-    z-index: 2;
+    z-index: 1001;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin: auto;
+    position: sticky;
+    top: 40px;
 }
+
 .navbar ul {
     display: flex;
     flex-direction: row;
@@ -108,6 +125,18 @@ p {
 
 .navbar img{
     height: 35px;
+}
+
+#logo__mobile{
+    display:none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.menu-overlay {
+    display: none;
 }
 
 ul li{
@@ -169,6 +198,8 @@ ul li{
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .header__buttons button:first-child, .live__button--full{
@@ -730,6 +761,8 @@ ul li{
     display: flex;
     flex-direction: row;
     gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .schedule__type .schedule__menu--switcher {
@@ -907,6 +940,447 @@ ul li{
     padding-right: 196px;
 }
 
+
+@media (max-width: 768px) {
+    .navbar ul li {
+        padding: 25px 20px !important;
+        font-size: 22px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: white !important;
+        list-style: none !important;
+        background-color: transparent !important;
+    }
+
+    .navbar ul li:last-child {
+        border-bottom: none !important;
+    }
+
+    .navbar ul li a {
+        display: block !important;
+        width: 100% !important;
+        color: white !important;
+        text-decoration: none !important;
+        padding: 15px 10px !important;
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+    }
+
+    .navbar ul li a:hover {
+        color: #30cec2 !important;
+        opacity: 1 !important;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+
+    .announcement {
+        line-height: 32px;
+        height: 40px;
+        padding: 8px 15px;
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+        max-width: 800px;
+    }
+
+    .announcement p:first-child{
+        display: none;
+    }
+
+    .announcement p:last-child{
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .navbar a:first-child{
+        display: none;
+    }
+
+    #logo__mobile{
+        display: inline-block;
+        width: 28px;
+        height: 32px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        padding: 20px;
+        position: sticky;
+        justify-content: space-between;
+        width: 300px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        z-index: 1001;
+        order: 3;
+        position: relative;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+        border-radius: 3px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .navbar ul {
+        position: fixed !important;
+        top: -100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 350px !important;
+        background-color: #0A181B !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding: 100px 30px 50px 30px !important;
+        transition: top 0.3s ease !important;
+        z-index: 1000 !important;
+        border-bottom: 2px solid #30cec2 !important;
+        margin: 0 !important;
+        list-style: none !important;
+        padding-inline-start: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .navbar ul.active {
+        top: 0 !important;
+    }
+
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+        padding-top: 50px;
+    }
+
+    .typing {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .header__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header__buttons button:first-child{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    .header__buttons button:last-child {
+        display: none;
+    }
+
+    .live__container {
+        display: none;
+    }
+
+    .conference {
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .conference__title {
+        margin-left: 0;
+        width: 100%;
+        font-size: 22px;
+        line-height: 32px;
+        height: auto;
+    }
+
+    .conference__title h1{
+        line-height: 40px;
+    }
+
+    .conference p {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .lectures {
+        margin: 0;
+        padding: 60px 20px;
+    }
+
+    .lectures__block {
+        flex-direction: column;
+    }
+
+    .lectures__block:first-child {
+        flex-direction: column-reverse;
+    }
+
+    .lectures img {
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .lectures__content {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .lecture {
+        margin-bottom: 40px;
+        margin-left: 40px;
+        width: 300px;
+    }
+
+    .lectures__title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .lectures__description h2 {
+        width: 100%;
+        font-size: 36px;
+        line-height: 44px;
+        height: auto;
+    }
+
+    .lectures__description p {
+        width: 100%;
+        height: auto;
+    }
+
+    .lecture__type {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .lecture__type:last-child{
+        padding-left: 40px;
+    }
+
+    .type {
+        width: 100%;
+        height: auto;
+    }
+
+    .schedule__type {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .live__container--full {
+        display: none;
+    }
+
+    .schedule__title h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .schedule__list {
+        width: 100%;
+    }
+
+    .schedule__item,
+    .schedule__item--open {
+        width: 360px;
+    }
+
+    .schedule__item--open {
+        max-height: 880px;
+    }
+
+    .schedule__list--subtitle {
+        flex-wrap: wrap;
+        padding-left: 10px;
+        max-width: 100%;
+    }
+
+    .schedule__item, .schedule__item--open{
+        margin-left: 10px;
+        padding: 8px;
+    }
+
+    .schedule__time {
+        padding-left: 0;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .item__about {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100%;
+        max-height: 400px;
+    }
+
+    .item__about--open {
+        padding-left: 10px;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .item__about--open img{
+        width: 102px;
+        height: auto;
+    }
+
+    .item__about--open .item__about {
+        padding-left: 0;
+        padding-right: 10px;
+        width: 230px;
+        padding: 16px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 8px;
+    }
+
+    .announcement {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .navbar img {
+        height: 28px;
+    }
+
+    ul li {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 24px;
+        padding-top: 30px;
+    }
+
+    .typing {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .header__buttons button:first-child
+    .live__button--full {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+
+    .live__container,
+    .live__container--full {
+        display: none;
+    }
+
+    .feed__title,
+    .feed__title--full {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .feed__host,
+    .feed__about,
+    .feed__host--full {
+        font-size: 14px;
+    }
+
+    .conference__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .lectures__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .lectures__description h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .schedule__title h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .schedule__menu--switcher {
+        min-width: 70px;
+        height: 90px;
+        font-size: 14px;
+    }
+
+    .schedule__menu--switcher h3 {
+        font-size: 28px;
+    }
+
+    .schedule__type .schedule__menu--switcher {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
 
 
 .sponsors {
@@ -1538,7 +2012,7 @@ a.sponsor__logo::after {
         width: 24px;
         height: 24px;
     }
-}
+} 
 
 .past-years {
     background-color: #0A181B;
