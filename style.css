@@ -1539,3 +1539,106 @@ a.sponsor__logo::after {
         height: 24px;
     }
 }
+
+.past-years {
+    background-color: #0A181B;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.gallery__title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.timeline-wrapper {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.timeline-track {
+    display: flex;
+    width: max-content;
+    animation: infiniteSlide 80s linear infinite;
+}
+
+.timeline-content {
+    display: flex;
+}
+
+.year-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    margin-right: 50px;
+    border-left: 2px dashed rgba(255, 255, 255, 0.4);
+    position: relative;
+}
+
+.year-group::after {
+    content: attr(data-year);
+    position: absolute;
+    bottom: -45px;
+    left: -15px;
+    color: #30cec2; 
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 220px); 
+    grid-auto-flow: column;
+    gap: 20px;
+}
+
+.items-grid img, 
+.stat-card {
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.items-grid img:hover {
+    transform: scale(1.03);
+}
+
+.stat-card {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.stat-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.stat-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
+}
+
+@keyframes infiniteSlide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.timeline-track:hover {
+    animation-play-state: paused;
+}
